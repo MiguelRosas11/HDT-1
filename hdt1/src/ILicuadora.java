@@ -1,4 +1,4 @@
-public interface Licuadora {
+public interface ILicuadora {
     void encender();
     void apagar();
     boolean estaEncendida();
