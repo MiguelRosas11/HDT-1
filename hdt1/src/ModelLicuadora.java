@@ -1,13 +1,13 @@
 
-public class ModelLicuadora implements ILicuadora {
+public class ModelLicuadora implements Licuadora {
 
-    Licuadora licuadora;
+    LicuadorClass licuadora;
     public ModelLicuadora(){
 
     }
 
     public void crearLicuadora(double capacidadTotal, int velocidadMax){
-        licuadora = new Licuadora(capacidadTotal, velocidadMax);
+        licuadora = new LicuadorClass(capacidadTotal, velocidadMax);
     }
 
     public boolean verificarLLenado(double llenarVolumen){
