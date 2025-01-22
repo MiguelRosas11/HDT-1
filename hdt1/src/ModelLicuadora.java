@@ -11,10 +11,18 @@ public class ModelLicuadora implements ILicuadora {
     }
 
     public boolean verificarLLenado(double llenarVolumen){
-        if(llenarVolumen > licuadora.getCapacidadActual() || licuadora.getCapacidadActual() == 0 || llenarVolumen< 0){
+        if(llenarVolumen > licuadora.getCapacidadActual() || llenarVolumen< 0){
             return false;
         } 
          return true;
+    }
+
+    public boolean verificarVelocidad(int velocidad){
+        if(velocidad>=licuadora.getVelocidadMax()|| velocidad < 0){
+            return false;
+        }
+
+        return true;
     }
 
     @Override
@@ -47,12 +55,15 @@ public class ModelLicuadora implements ILicuadora {
 
     @Override
     public double vaciar(){
-
+        licuadora.setCapacidadActual(licuadora.getCapacidadTotal());
+        return licuadora.getCapacidadActual();
     }
 
     @Override
     public int incrementarVelocidad(){
+        licuadora.setCapacidadActual(licuadora.getVelocidadActual()+1);
 
+        return licuadora.getVelocidadActual();
     }
 
     @Override
