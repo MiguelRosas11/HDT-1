@@ -33,6 +33,14 @@ public class ModelLicuadora implements ILicuadora {
         return true;
     }
 
+    public boolean verificarServido(double servir){
+        if ((licuadora.getCapacidadTotal()-licuadora.getCapacidadActual())<= servir || servir < 0){
+            return false;
+        }
+
+        return true;
+    }
+
     @Override
     public void encender(){
         licuadora.setEstado(true);
@@ -83,16 +91,22 @@ public class ModelLicuadora implements ILicuadora {
 
     @Override
     public int consultarVelocidad(){
-
+        return licuadora.getVelocidadActual();
     }
 
     @Override
     public boolean estaLlena(){
+        if (licuadora.getCapacidadActual() == 0){
+            return true;
+        }
 
+        return false;
     }
 
     @Override
     public double servir(double volumenRestado){
+        licuadora.setCapacidadActual(licuadora.getCapacidadTotal()- licuadora.getVelocidadActual()- volumenRestado);
 
+        return licuadora.getCapacidadActual();
     }
 }
