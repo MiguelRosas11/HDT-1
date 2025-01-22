@@ -17,5 +17,15 @@ public class Main {
         } else {
             System.out.println("La licuadora no se puede llenar con: " + llenarVolumen + "litros");
         }
+
+        //incrementar la valocidad.
+        if(model.verificarVelocidad()){
+            model.incrementarVelocidad();
+            System.out.println("La velocidad se incremento a: " + model.consultarVelocidad());
+        } else {
+            System.out.println("No se puede sobrepasar el limite de velocidad.");
+        }
+
+        
     }
 }
