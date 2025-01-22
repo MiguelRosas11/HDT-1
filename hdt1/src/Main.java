@@ -26,6 +26,12 @@ public class Main {
             System.out.println("No se puede sobrepasar el limite de velocidad.");
         }
 
-        
+        //decrementar la velocidad.
+        if(model.verificarVelocidad()){
+            model.decrementarVelocidad();
+            System.out.println("La velocidad decremento a: " + model.consultarVelocidad());
+        } else{
+            System.out.println("Si la velocidad llega a 0, la licuadora se apagara.");
+        }
     }
 }
