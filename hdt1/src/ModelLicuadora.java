@@ -17,8 +17,16 @@ public class ModelLicuadora implements ILicuadora {
          return true;
     }
 
-    public boolean verificarVelocidad(int velocidad){
-        if(velocidad>=licuadora.getVelocidadMax()|| velocidad < 0){
+    public boolean verificarVelocidad(){
+        if(licuadora.getVelocidadActual()>=licuadora.getVelocidadMax()){
+            return false;
+        }
+
+        return true;
+    }
+
+    public boolean verificarBajada(){
+        if(licuadora.getCapacidadActual() == 0){
             return false;
         }
 
@@ -68,7 +76,9 @@ public class ModelLicuadora implements ILicuadora {
 
     @Override
     public int decrementarVelocidad(){
+        licuadora.setVelocidadActual(licuadora.getVelocidadActual()-1);
 
+        return licuadora.getVelocidadActual();
     }
 
     @Override
