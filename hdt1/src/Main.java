@@ -121,7 +121,7 @@ public class Main {
                     if (model.verificarServido(volumenAServir)) {
                         // Servir el volumen si es posible
                         model.servir(volumenAServir);
-                        System.out.println("Licuadora después de servir: " + model.llenarVolumen(0) + " litros.");
+                        System.out.println("Licuadora después de servir: " + model.llenar(0) + " litros.");
                     } else {
                         System.out.println("No se puede servir el volumen solicitado.");
                     }
