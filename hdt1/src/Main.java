@@ -27,7 +27,7 @@ public class Main {
         }
 
         //decrementar la velocidad.
-        if(model.verificarVelocidad()){
+        if(model.verificarBajada()){
             model.decrementarVelocidad();
             System.out.println("La velocidad decremento a: " + model.consultarVelocidad());
         } else{

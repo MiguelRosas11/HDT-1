@@ -26,7 +26,7 @@ public class ModelLicuadora implements Licuadora {
     }
 
     public boolean verificarBajada(){
-        if(licuadora.getCapacidadActual() == 0){
+        if(licuadora.getVelocidadActual() == 0){
             return false;
         }
 
@@ -77,7 +77,7 @@ public class ModelLicuadora implements Licuadora {
 
     @Override
     public int incrementarVelocidad(){
-        licuadora.setCapacidadActual(licuadora.getVelocidadActual()+1);
+        licuadora.setVelocidadActual(licuadora.getVelocidadActual()+1);
 
         return licuadora.getVelocidadActual();
     }
@@ -105,7 +105,7 @@ public class ModelLicuadora implements Licuadora {
 
     @Override
     public double servir(double volumenRestado){
-        licuadora.setCapacidadActual(licuadora.getCapacidadTotal()- licuadora.getVelocidadActual()- volumenRestado);
+        licuadora.setCapacidadActual(licuadora.getCapacidadActual()+ volumenRestado);
 
         return licuadora.getCapacidadActual();
     }
