@@ -61,7 +61,7 @@ public class ModelLicuadora implements Licuadora {
     }
 
     @Override
-    public double llenarVolumen(double volumen){
+    public double llenar(double volumen){
         double llenado = licuadora.getCapacidadActual() - volumen;
         
         licuadora.setCapacidadActual(llenado);
@@ -109,4 +109,5 @@ public class ModelLicuadora implements Licuadora {
 
         return licuadora.getCapacidadActual();
     }
+    
 }
