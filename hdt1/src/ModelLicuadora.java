@@ -26,7 +26,7 @@ public class ModelLicuadora implements Licuadora { //Implementa la interfaz licu
     }
 
     public boolean verificarBajada(){
-        if(licuadora.getCapacidadActual() == 0){
+        if(licuadora.getVelocidadActual() == 0){
             return false;
         }
 
@@ -61,7 +61,7 @@ public class ModelLicuadora implements Licuadora { //Implementa la interfaz licu
     }
 
     @Override
-    public double llenarVolumen(double volumen){
+    public double llenar(double volumen){
         double llenado = licuadora.getCapacidadActual() - volumen;
         
         licuadora.setCapacidadActual(llenado);
@@ -77,7 +77,7 @@ public class ModelLicuadora implements Licuadora { //Implementa la interfaz licu
 
     @Override
     public int incrementarVelocidad(){
-        licuadora.setCapacidadActual(licuadora.getVelocidadActual()+1);
+        licuadora.setVelocidadActual(licuadora.getVelocidadActual()+1);
 
         return licuadora.getVelocidadActual();
     }
@@ -105,8 +105,9 @@ public class ModelLicuadora implements Licuadora { //Implementa la interfaz licu
 
     @Override
     public double servir(double volumenRestado){
-        licuadora.setCapacidadActual(licuadora.getCapacidadTotal()- licuadora.getVelocidadActual()- volumenRestado);
+        licuadora.setCapacidadActual(licuadora.getCapacidadActual()+ volumenRestado);
 
         return licuadora.getCapacidadActual();
     }
+    
 }

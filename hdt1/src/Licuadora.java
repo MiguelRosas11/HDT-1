@@ -2,7 +2,7 @@ public interface Licuadora {
     void encender();
     void apagar();
     boolean estaEncendida();
-    double llenarVolumen (double volumen);
+    double llenar (double volumen);
     double vaciar();
     int incrementarVelocidad();
     int decrementarVelocidad();

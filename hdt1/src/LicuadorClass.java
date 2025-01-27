@@ -3,6 +3,7 @@ public class LicuadorClass {
     private boolean estado;
     private int velocidadMax, velocidadActual;
 
+    //Constructor del objeto LicuadorClass
     public LicuadorClass (double capacidadTotal, int velocidadMax){
         this.capacidadTotal = capacidadTotal;
         this.capacidadActual= capacidadTotal;
@@ -10,7 +11,8 @@ public class LicuadorClass {
         this.velocidadMax = velocidadMax;
         this.velocidadActual= 0;
     }
-
+    
+    //Sets y gets
     public double getCapacidadTotal(){
         return capacidadTotal;
     }
