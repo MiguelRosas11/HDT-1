@@ -109,4 +109,5 @@ public class ModelLicuadora implements Licuadora {
 
         return licuadora.getCapacidadActual();
     }
+    
 }
