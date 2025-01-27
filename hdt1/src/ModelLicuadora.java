@@ -1,16 +1,16 @@
 
-public class ModelLicuadora implements Licuadora {
+public class ModelLicuadora implements Licuadora { //Implementa la interfaz licuadora
 
     LicuadorClass licuadora;
     public ModelLicuadora(){
 
     }
 
-    public void crearLicuadora(double capacidadTotal, int velocidadMax){
+    public void crearLicuadora(double capacidadTotal, int velocidadMax){ //Constructor de la licuadora
         licuadora = new LicuadorClass(capacidadTotal, velocidadMax);
     }
 
-    public boolean verificarLLenado(double llenarVolumen){
+    public boolean verificarLLenado(double llenarVolumen){ //Este método
         if(llenarVolumen > licuadora.getCapacidadActual() || llenarVolumen< 0){
             return false;
         } 
