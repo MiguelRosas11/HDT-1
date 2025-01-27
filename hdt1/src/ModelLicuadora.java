@@ -77,7 +77,7 @@ public class ModelLicuadora implements Licuadora {
 
     @Override
     public int incrementarVelocidad(){
-        licuadora.setCapacidadActual(licuadora.getVelocidadActual()+1);
+        licuadora.setVelocidadActual(licuadora.getVelocidadActual()+1);
 
         return licuadora.getVelocidadActual();
     }
